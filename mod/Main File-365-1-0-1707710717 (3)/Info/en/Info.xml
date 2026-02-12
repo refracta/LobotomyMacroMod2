@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+  <name>Command Macro Mod 2 v0.0.14</name>
+  <descs>
+    <desc>Repeating abnormality work macro with Insert/Home/End shortcuts.</desc>
+    <desc>Shift + Work command: activate the original repeating macro.</desc>
+    <desc>Insert: save current moving/working agents and their target abnormality/work.</desc>
+    <desc>Shift + Insert: print the saved Insert layout to system log.</desc>
+    <desc>Home: assign dispatchable agents to the saved Insert layout.</desc>
+    <desc>End: cancel only en-route work actions for agents saved by Insert.</desc>
+  </descs>
+</info>

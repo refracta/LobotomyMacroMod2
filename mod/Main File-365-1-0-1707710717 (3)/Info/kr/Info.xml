@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+  <name>작업 매크로 모드2 v0.0.14</name>
+  <descs>
+    <desc>환상체 작업 반복 매크로 + Insert/Home/End 단축키 지원 모드</desc>
+    <desc>Shift + 작업 명령: 기존 반복 매크로 활성화</desc>
+    <desc>Insert: 현재 작업 이동/진행 중 직원의 환상체/작업을 저장</desc>
+    <desc>Shift + Insert: Insert 저장 목록을 시스템 로그로 출력</desc>
+    <desc>Home: 동원 가능한 직원에게 Insert 저장 작업을 지정</desc>
+    <desc>End: Insert 저장 직원 중 이동 중 작업만 취소</desc>
+  </descs>
+</info>
