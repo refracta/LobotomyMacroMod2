@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <info>
-  <name>작업 매크로 모드2 v0.0.14</name>
+  <name>작업 매크로 모드2 v0.0.15</name>
   <descs>
     <desc>환상체 작업 반복 매크로 + Insert/Home/End 단축키 지원 모드</desc>
     <desc>Shift + 작업 명령: 기존 반복 매크로 활성화</desc>
