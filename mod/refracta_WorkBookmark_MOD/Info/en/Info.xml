@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+  <name>Work Bookmark Mod v0.0.1</name>
+  <descs>
+    <desc>Work Bookmark extension used together with the original Command Macro mod</desc>
+    <desc>Insert: save current moving/working agent -&gt; abnormality/work pairs</desc>
+    <desc>Shift + Insert: print saved pairs to the system log</desc>
+    <desc>Home: assign dispatchable agents based on saved pairs</desc>
+    <desc>End: cancel only en-route work actions for saved agents</desc>
+  </descs>
+</info>

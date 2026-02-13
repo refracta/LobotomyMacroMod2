@@ -72,16 +72,10 @@ public class Harmony_Patch
 
 	public static void AgentModel_ManageCreature(AgentModel __instance, CreatureModel target, SkillTypeInfo skill, Sprite skillSprite)
 	{
-		bool flag = actorCache == __instance;
-		if (!flag && IsShiftHeld() && target != null && skill != null)
-		{
-			flag = true;
-		}
-		if (flag)
+		if (actorCache == __instance)
 		{
 			CreatureCheck.SetApAgent(__instance, target, skill, skillSprite);
 			((UnitModel)__instance).AddUnitBuf((UnitBuf)(object)new MacroBurf(target));
-			SendSystemLog(Localize("Shift 반복 등록: ", "Shift repeat registered: ") + __instance.name + " -> " + GetCreatureName(target) + " (" + GetSkillName(skill) + ")");
 		}
 		actorCache = null;
 	}
@@ -185,15 +179,12 @@ public class Harmony_Patch
 			AgentModel apAgent = CreatureCheck.GetApAgent(__instance);
 			if (apAgent != null && !((WorkerModel)apAgent).IsDead() && !((WorkerModel)apAgent).IsCrazy() && !((UnitModel)apAgent).HasUnitBuf((UnitBufType)19) && (int)apAgent.GetState() == 0 && (int)__instance.state == 0)
 			{
-				SkillTypeInfo apWorkInfo = CreatureCheck.GetApWorkInfo(__instance);
-				Sprite apWorkSprite = CreatureCheck.GetApWorkSprite(__instance);
-				apAgent.ManageCreature(__instance, apWorkInfo, apWorkSprite);
+				apAgent.ManageCreature(__instance, CreatureCheck.GetApWorkInfo(__instance), CreatureCheck.GetApWorkSprite(__instance));
 				apAgent.counterAttackEnabled = false;
 				__instance.Unit.room.OnWorkAllocated(apAgent);
-				__instance.script.OnWorkAllocated(apWorkInfo, apAgent);
+				__instance.script.OnWorkAllocated(CreatureCheck.GetApWorkInfo(__instance), apAgent);
 				((UnitModel)apAgent).AddUnitBuf((UnitBuf)(object)new MacroBurf(__instance));
-				AngelaConversation.instance.MakeMessage((AngelaMessageState)3, new object[3] { apAgent, apWorkInfo, __instance });
-				SendSystemLog(Localize("반복 작업 실행: ", "Repeat work executed: ") + apAgent.name + " -> " + GetCreatureName(__instance) + " (" + GetSkillName(apWorkInfo) + ")");
+				AngelaConversation.instance.MakeMessage((AngelaMessageState)3, new object[3] { apAgent, CreatureCheck.GetApWorkInfo(__instance), __instance });
 			}
 			Do_Macro.Remove(((object)__instance.metaInfo.LcId).ToString());
 		}

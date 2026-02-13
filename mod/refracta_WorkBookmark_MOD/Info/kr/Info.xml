@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+  <name>작업 북마크 모드 v0.0.1</name>
+  <descs>
+    <desc>원본 작업 매크로 모드와 함께 쓰는 작업 북마크 확장 모드</desc>
+    <desc>Insert: 현재 작업 이동/진행 중 직원의 환상체/작업 페어를 저장</desc>
+    <desc>Shift + Insert: 저장된 페어 목록을 시스템 로그에 출력</desc>
+    <desc>Home: 저장된 페어를 기준으로 동원 가능한 직원을 작업에 투입</desc>
+    <desc>End: 저장된 직원 중 이동 중인 작업만 취소</desc>
+  </descs>
+</info>
